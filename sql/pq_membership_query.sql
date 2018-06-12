@@ -62,6 +62,7 @@ SELECT @atts_join = (
 					Attribute.AttributeID = Precision_Queue_Term.AttributeID
 
 					-- CUIC param to filter by PQS, 1 of 2
+			    		-- Edit or remove this if running directly in SQL Studio
 					AND Precision_Queue.PrecisionQueueID IN (:pqs)
       
 			ORDER BY Precision_Queue.PrecisionQueueID,
@@ -216,6 +217,7 @@ FROM #temp_pq_table pqm
 	-- end join on precision queue rules string
 
 	-- CUIC param to filter by PQS, 2 of 2
+	-- Edit or remove this if running directly in SQL Studio
 	WHERE pqm.PrecisionQueueID in (:pqs)
 
 DROP TABLE #temp_pq_table
