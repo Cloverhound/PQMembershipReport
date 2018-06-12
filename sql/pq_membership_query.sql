@@ -34,6 +34,8 @@ SELECT @atts_join = (
 					When Precision_Queue_Term.AttributeRelation = 4 Then '<='
 					When Precision_Queue_Term.AttributeRelation = 5 Then '>'
 					When Precision_Queue_Term.AttributeRelation = 6 Then '>='
+					-- the below are documented in API guide but I don't think actually used
+					-- if used they won't work at all presently
 					When Precision_Queue_Term.AttributeRelation = 7 Then 'between'
 					When Precision_Queue_Term.AttributeRelation = 8 Then 'member'
 					When Precision_Queue_Term.AttributeRelation = 9 Then 'agent has attribute'
